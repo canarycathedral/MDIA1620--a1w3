@@ -6,7 +6,7 @@ const readline = require('readline').createInterface({
 });
 
 // Title for the bot
-const title = "THE CHATTER BOT";
+const title = "The great bao eating contest";
 
 // Initialize variables
 let myName = "Guest12345";  // Default name if user doesn't provide one
@@ -17,26 +17,26 @@ let chatCount = 0;          // Counter to track how many times the user has chat
  */
 function AskFunction() {
   // Prompt the user to say something (or type "exit" to quit)
-  readline.question("You're about to enter a bao bun eating contest " + myName + '! You need to eat 5 to win!. (type "exit" to quit): ', input => {
+  readline.question("Our character, " + myName + ' is about to enter a bao eating contest. they need to eat 5 to win!. (type "exit" to quit): ', input => {
     
     // If user types "exit", end the program
     if (input.toLowerCase() === 'exit') {
-      console.log("YOU LOST " + myName + ". You owe everyone ",chatCount +"0000000000000 dollars!!!"); // Farewell message
+      console.log(myName, "LOST. " + myName + " owes everyone ",chatCount +"0000000000000 dollars!!!"); // Farewell message
       readline.close(); // Close the input stream to end the program
       return;
     }
 
     // If the user didn't type "exit", keep chatting
-    console.log("You're doing great!"); // Acknowledge the user's input
+    console.log("They're doing great!"); // Acknowledge the user's input
 
     // Increment chatCount by 1 each time the user chats
     chatCount = chatCount + 1;
-    console.log("You've eaten " + chatCount + " bao buns so far"); // Show how many chats have happened
+    console.log(myName, "has eaten " + chatCount + " bao buns so far"); // Show how many chats have happened
 
     // If the user has chatted 5 times, end the conversation and prompt for payment
     if (chatCount === 5) {
-      console.log("You won cus you ate " + chatCount, "bao buns!!! Good job!!!"); // Alert user they've hit the limit
-      console.log("You win ",chatCount, "dollars"); // Prompt for payment
+      console.log(myName, "won cus they ate " + chatCount, "bao buns!!! Awesomesauce!!!"); // Alert user they've hit the limit
+      console.log(myName,"won ",chatCount, "dollars"); // Prompt for payment
       readline.close(); // End the chat
       return;
     }
@@ -52,7 +52,7 @@ function AskFunction() {
 function AskName() {
   console.log("WELCOME TO THE " + title); // Display the bot title
   // Ask the user for their name (or to type "exit" to quit)
-  readline.question('Hello, what is your name? (type "exit" to quit): ', input => {
+  readline.question("Choose our character's name (type 'exit' to quit): ", input => {
     
     // If user types "exit", end the program
     if (input.toLowerCase() === 'exit') {
